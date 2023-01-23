@@ -33,3 +33,13 @@ And Vejo o filtro do histórico de compras
 When Eu seleciono “2022” no filtro
 And Seleciono “março” no filtro
 Then Eu vejo todas as compras que foram feitas no mês de março do ano de 2022
+
+Scenario: Clicar em comprar novamente em uma compra com algum item indisponível
+Given Eu estou logada no sistema como cliente com o login “aqrs” e senha “1234”
+And Estou vendo o histórico de pedidos da minha conta
+And Vejo uma compra com os itens “Camisa verde” e “Calça roxa”
+And Vejo que o item “Camisa verde” ainda está em estoque no sistema
+And Vejo que o item “Calça roxa” não está em estoque no sistema
+When Eu seleciono “comprar novamente”
+Then Eu vejo uma mensagem dizendo que o item “Calça roxa” está indisponível
+And Vejo que o item “Camisa verde” está no carrinho de compras
