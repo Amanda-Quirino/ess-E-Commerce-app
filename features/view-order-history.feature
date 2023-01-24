@@ -50,3 +50,13 @@ And Eu estou na página inicial do sistema
 When Eu seleciono “Ver histórico de pedidos”
 Then Eu vejo uma mensagem falando que tenho que fazer login para ver o histórico de pedidos
 And Eu vejo a página de login
+
+Scenario: Selecionar um item indisponível no histórico de compras
+Given Eu estou logada no sistema como cliente com o login “aqrs” e senha “1234”
+And Estou vendo o histórico de pedidos da minha conta
+And Vejo uma compra com o item “Calça roxa”
+And Vejo que o item “Calça roxa” não está em estoque no sistema
+When Eu seleciono o item “Calça roxa”
+Then Eu vejo uma mensagem avisando que esse item não está disponível
+And Eu seleciono “Fechar mensagem”
+And Eu continuo vendo o histórico de pedidos
