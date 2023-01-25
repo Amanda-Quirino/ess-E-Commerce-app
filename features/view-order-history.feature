@@ -66,8 +66,9 @@ And Eu continuo vendo o histórico de pedidos
 Scenario: Clicar em comprar novamente em uma compra em que a quantidade de um mesmo item em estoque é menor do que a quantidade comprada anteriormente
 Given Eu estou logada no sistema como cliente com o login “aqrs” e senha “1234”
 And Estou vendo o histórico de pedidos da minha conta
-And Vejo uma compra de 3 unidades do item “Calça roxa”
-And Vejo que há apenas 2 unidade do item “Calça roxa” em estoque
+And Vejo uma compra de 3 unidades do item “Calça verde”
+And Vejo que há apenas 2 unidade do item “Calça verde” em estoque
 When Eu seleciono “comprar novamente”
-Then Eu vejo uma mensagem informando que não há unidades suficientes do item “Calça roxa” em estoque
-And Eu vejo que 2 unidades do item “Calça roxa” estão no carrinho de compras
+Then Eu vejo uma mensagem informando que não há unidades suficientes do item “Calça verde” em estoque
+And Eu vejo que 2 unidades do item “Calça verde” estão no carrinho de compras
+And Eu compro 2 unidades do item “Calça verde”
