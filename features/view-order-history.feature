@@ -50,3 +50,5 @@ And Eu estou na página inicial do sistema
 When Eu seleciono “Ver histórico de pedidos”
 Then Eu vejo uma mensagem falando que tenho que fazer login para ver o histórico de pedidos
 And Eu vejo a página de login
+And eu faço o login
+And eu vejo o histórico de compras associado a minha conta
