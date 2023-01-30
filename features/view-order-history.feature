@@ -5,6 +5,7 @@ And Estou vendo o produto “Camisa verde” no histórico
 And Vejo que esse produto ainda está em estoque no sistema
 When Eu seleciono o produto “Camisa verde”
 Then Eu vejo a página desse produto
+And Eu vejo as informações sobre esse produto
 
 Scenario: Clicar em comprar novamente em uma compra com todos os itens disponíveis
 Given Eu estou logada no sistema como cliente com o login “aqrs” e senha “1234”
