@@ -33,6 +33,7 @@ And Estou vendo o histórico de pedidos da minha conta
 And Vejo o filtro do histórico de compras
 When Eu seleciono “2022” no filtro
 And Seleciono “março” no filtro
+And Seleciono "filtrar"
 Then Eu vejo todas as compras que foram feitas no mês de março do ano de 2022
 
 Scenario: Clicar em comprar novamente em uma compra com algum item indisponível
