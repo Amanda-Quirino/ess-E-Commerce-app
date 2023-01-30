@@ -42,6 +42,7 @@ And Vejo que o item “Camisa verde” ainda está em estoque no sistema
 And Vejo que o item “Calça roxa” não está em estoque no sistema
 When Eu seleciono “comprar novamente”
 Then Eu vejo uma mensagem dizendo que o item “Calça roxa” está indisponível
+And Eu seleciono “Fechar mensagem”
 And Vejo que o item “Camisa verde” está no carrinho de compras
 
 Scenario: Tentar ver o histórico de compras sem estar logada
@@ -70,5 +71,6 @@ And Vejo uma compra de 3 unidades do item “Calça verde”
 And Vejo que há apenas 2 unidade do item “Calça verde” em estoque
 When Eu seleciono “comprar novamente”
 Then Eu vejo uma mensagem informando que não há unidades suficientes do item “Calça verde” em estoque
+And Eu seleciono “Fechar mensagem”
 And Eu vejo que 2 unidades do item “Calça verde” estão no carrinho de compras
 And Eu compro 2 unidades do item “Calça verde”
